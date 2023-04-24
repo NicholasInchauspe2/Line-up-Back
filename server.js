@@ -19,7 +19,13 @@ dbConnection();
 app.use(express.static("public"));
 
 // CORS
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "DELETE", "OPTIONS"],
+    credentials: true,
+  })
+);
 
 // Lectura y parseo del body
 app.use(express.json());
