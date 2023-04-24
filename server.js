@@ -19,7 +19,15 @@ dbConnection();
 app.use(express.static("public"));
 
 // CORS
-app.use(cors());
+app.use(
+  cors({
+    // Si aún no tenes deployado tu front en origin va la url local.
+    // Una vez que se deploye el front acá va esa url que te entrega.
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "DELETE", "OPTIONS"],
+    credentials: true,
+  })
+);
 
 // Lectura y parseo del body
 app.use(express.json());
@@ -28,6 +36,6 @@ app.use("/api", routerIndex);
 // Rutas
 
 app.listen(process.env.PORT, () => {
-  // console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
-  // swaggerDocs(app, process.env.PORT);
+  console.log(`Servidor corriendo en puerto ${3001}`);
+  swaggerDocs(app, 3001);
 });
