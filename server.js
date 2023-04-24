@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const dbConnection = require("./db");
-const User = require("./models/user");
-const Branch = require("./models/branch");
-const Appointment = require("./models/appointment");
-const seed = require("./config/seed");
-const routerIndex = require("./routes");
-const { swaggerDocs } = require("./routes/swagger");
+const dbConnection = require("./api/db");
+const User = require("./api/models/user");
+const Branch = require("./api/models/branch");
+const Appointment = require("./api/models/appointment");
+const seed = require("./api/config/seed");
+const routerIndex = require("./api/routes");
+const { swaggerDocs } = require("./api/routes/swagger");
 require("dotenv").config();
 
 // Crear el servidor/aplicación de express
