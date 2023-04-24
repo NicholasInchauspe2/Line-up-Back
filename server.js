@@ -28,6 +28,6 @@ app.use("/api", routerIndex);
 // Rutas
 
 app.listen(process.env.PORT, () => {
-  console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
-  swaggerDocs(app, process.env.PORT);
+  // console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
+  // swaggerDocs(app, process.env.PORT);
 });
