@@ -21,7 +21,7 @@ app.use(express.static("public"));
 // CORS
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "DELETE", "OPTIONS", "PUT"],
     credentials: true,
   })
