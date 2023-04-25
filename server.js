@@ -21,7 +21,7 @@ app.use(express.static("public"));
 // CORS
 app.use(
   cors({
-    origin: "https://web-app-line-up1.vercel.app/registro",
+    origin: "https://web-app-line-up1.vercel.app",
     methods: ["GET", "POST", "DELETE", "OPTIONS", "PUT"],
     credentials: true,
   })
